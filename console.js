@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /**
  * Função para exibição de dados no console no formato de tabela.
  * @param {Object[] | Object} [data] - O conteúdo que será exibido.
@@ -109,3 +111,7 @@ const count = () => {
 };
 
 const style = () => console.log('%c something beautiful ', 'color: white; background: #0d0d0d; padding: 16px;');
+
+module.exports = {
+  table, dir, warn, error, assert, clear, group, time, count, style,
+};

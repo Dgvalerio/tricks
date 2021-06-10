@@ -2,28 +2,28 @@
  * map
  * @param {Array} [data] - O conteúdo que será exibido.
  */
-const map = (data) => data.map((d) => d);
+export const map = (data) => data.map((d) => d);
 
 /**
  * filter
  * @param {Array} data - O conteúdo que será exibido.
- * @param {any} filter - ?.
+ * @param {any} filterField - ?.
  */
-const filter = (data, filter) => data.filter((d) => d === filter);
+export const filter = (data, filterField) => data.filter((d) => d === filterField);
 
 /**
  * find
  * @param {Array} data - O conteúdo que será exibido.
- * @param {any} find - ?.
+ * @param {any} findField - ?.
  */
-const find = (data, find) => data.find((d) => d === find);
+export const find = (data, findField) => data.find((d) => d === findField);
 
 /**
  * findIndexOf
  * @param {Array} data - O conteúdo que será exibido.
  * @param {any} of - ?.
  */
-const findIndexOf = (data, of) => data.findIndex((d) => d === of);
+export const findIndexOf = (data, of) => data.findIndex((d) => d === of);
 
 /**
  * fill
@@ -31,38 +31,25 @@ const findIndexOf = (data, of) => data.findIndex((d) => d === of);
  * @param {any} item - ?.
  * @param {any} pos - ?.
  */
-const fill = (data, item, pos) => data.fill(item, pos);
+export const fill = (data, item, pos) => data.fill(item, pos);
 
 /**
  * some
  * @param {Array} [data] - O conteúdo que será exibido.
  * @param {any} item - ?.
  */
-const some = (data, item) => data.some((d) => d === item);
+export const some = (data, item) => data.some((d) => d === item);
 
 /**
  * every
  * @param {Array} [data] - O conteúdo que será exibido.
  * @param {any} item - ?.
  */
-const every = (data, item) => data.every((d) => d === item);
+export const every = (data, item) => data.every((d) => d === item);
 
-const splice = () => {};
-const slice = () => {};
+export const splice = () => {};
+export const slice = () => {};
 
-console.table([
-  { name: 'map', in: '[0, 0, 0, 0]', out: map([0, 0, 0, 0]).toString() },
-  { name: 'filter', in: '[0, 0, 1, 0]', out: filter([0, 0, 1, 0], 1).toString() },
-  { name: 'find', in: '[1, 1, 0, 0]', out: find([1, 1, 0, 0], 1).toString() },
-  { name: 'findIndexOf', in: '[1, 1, 1, 0]', out: findIndexOf([1, 1, 1, 0], 0).toString() },
-  { name: 'fill', in: '[0, 0, 0, 0]', out: fill([0, 0, 0, 0], 3, 2).toString() },
-  { name: 'some', in: '[1, 0, 0, 1]', out: some([1, 0, 0, 1], 0).toString() },
-  { name: 'every', in: '[0, 0, 0, 1]', out: every([0, 0, 0, 1], 0).toString() },
-]);
-
-
-
-
-
-
-
+module.exports = {
+  map, filter, find, findIndexOf, fill, some, every, splice, slice,
+};
