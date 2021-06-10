@@ -29,26 +29,35 @@
  */
 const table = (data, columns) => console.table(data, columns);
 
-const dir = () => {
-  console.dir(document.body);
-};
+/** Função para retornar as propriedades de um elemento HTML. */
+const dir = () => console.dir(document.body);
 
-const warn = () => {
-  console.warn('warn');
-};
+/**
+ * Função para exibir algo no console em formatação de alerta.
+ * @param {any} message - Conteúdo que será retornado.
+ */
+const warn = (message) => console.warn(message);
 
-const error = () => {
-  console.error('error');
-};
+/**
+ * Função para exibir algo no console em formatação de erro.
+ * @param {any} message - Conteúdo que será retornado.
+ */
+const error = (message) => console.error(message);
 
-const assert = () => {
-  console.assert(1 === 2, 'algo'); // Só retorna o errado
-  console.assert(2 === 2, 'algo');
-};
+/**
+ * Função para exibir algo caso uma condição seja falsa.
+ * @param {any} condition - Conteúdo que será retornado.
+ * @param {any} message - Conteúdo que será retornado.
+ * @example
+ * assert(1 === 2, 'algo');
+ * // return: Assertion failed: algo
+ * assert(2 === 2, 'algo');
+ * // no return.
+ */
+const assert = (condition, message) => console.assert(condition, message);
 
-const clear = () => {
-  console.clear();
-};
+/** Função para limpar o console. */
+const clear = () => console.clear();
 
 const group = () => {
   console.group();

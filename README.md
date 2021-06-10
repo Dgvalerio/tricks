@@ -1,3 +1,3 @@
 # JS TRICKS
 
-Alguns "truques" que eu aprendi com o tempo para usar com javascript.
+Algumas funcionalidades que o javascript oferece, quais eu fui aprendendo com o tempo.
